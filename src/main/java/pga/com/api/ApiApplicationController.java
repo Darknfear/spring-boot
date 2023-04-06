@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ApiApplicationController {
-  public String getString() {
-    return "Hello";
+  @GetMapping("/greeting")
+  public String greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+    return "hieu";
   }
 }
